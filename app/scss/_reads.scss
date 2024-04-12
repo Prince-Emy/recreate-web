@@ -1,0 +1,373 @@
+.readingSection {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0;
+    padding-top: 0;
+    flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+    justify-content: space-between; /* Distribute items evenly along the main-axis */
+
+    @media (max-width: 827px) {
+        margin-top: 0;
+        margin-left: 1.875rem;
+        margin-right: 1.875rem;
+    }
+
+    @media (max-width: 576px) {
+        margin-top: 0;
+        padding-top: 0;
+        margin-top: 5.125rem;
+    }
+}
+
+/* Columns */
+.left-column, .right-column {
+    width: calc(50% - 10px); /* Adjust margin for spacing between columns */
+    margin-bottom: 20px;
+    
+}
+.left-column {
+    width: 75%; /* Set left column to 75% width */
+    box-sizing: border-box;
+}
+
+.right-column {
+    width: 25%; /* Set right column to 25% width */
+    box-sizing: border-box;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .left-column, .right-column {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.reads {
+    background-color: $veryLightGray ;
+
+
+    @media (max-width: 576px) {
+        margin-top: 5.125rem;
+    }
+}
+
+.read {
+
+    
+
+    &__content{
+        h2{
+            font-size: 1.5625rem;
+            line-height: 2.15rem;
+            font-weight: 700;
+        }
+
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.875rem;
+
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item{
+       border-radius: 0.125rem;
+       overflow: hidden;
+    }
+
+    &__image{
+        height: 15rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @media (max-width: 827px) {
+            height: 8.5rem;
+        }
+    
+        @media (max-width: 576px) {
+            height: 5.125rem;
+        }
+    }
+
+    &__text{
+        background-color: $white;
+        padding: 1.875rem 0 2.5rem 0;
+
+        @include breakpoint-up(medium){
+            // padding: 1.875rem 1.5625rem;
+        }
+    }
+
+    &__title {
+        font-size: 0.95rem;
+        line-height: 1.25;
+        font-weight: 600;
+        color: $black;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description{
+        font-size: 0.7rem;
+        color: $black;
+        margin-bottom: 0.5rem;
+        color: $darkblue;
+    }
+
+    &__author{
+        font-size: 0.6rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px $black solid;
+        color: $darkblue;
+    }
+
+}
+
+.news{
+    background-color: $white;
+
+    @media (max-width: 826px) {
+        margin-left: 1.8755rem;
+        margin-right: 1.8755rem;
+    }
+
+}
+
+.new{
+
+    &__title{
+            font-size: 0.75rem;
+            line-height: 2.15;
+            font-weight: 700;
+            color: $purple;
+            text-transform: uppercase;
+            margin: 20.75px 0;
+        }
+
+    &__topic{
+        font-size: 0.9375rem;
+        border-bottom: 1px black solid;
+        padding-top: 1.875rem;
+    }
+
+    @media (max-width: 720px) {
+            width: 100%; /* Full width on smaller screens */
+            margin-left: 1.875rem;
+            margin-right: 1.875rem;
+        }
+}
+
+//Second Reading Section
+
+/* Columns */
+.left-column2, .right-column2 {
+    width: calc(50% - 10px); /* Adjust margin for spacing between columns */
+    margin-bottom: 20px;
+    
+}
+.left-column2 {
+    width: 50%; /* Set left column to 75% width */
+    box-sizing: border-box;
+}
+
+.right-column2 {
+    width: 50%; /* Set right column to 25% width */
+    box-sizing: border-box;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .left-column2, .right-column2 {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+.reading__title{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    font-weight: 200;
+    font-size: $font-bg;
+}
+.reads2 {
+    background-color: $veryLightGray ;
+
+
+    @media (max-width: 576px) {
+        margin-top: 5.125rem;
+    }
+}
+
+.read2 {
+
+    &__headImage{
+        height: 20.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @media (max-width: 827px) {
+            height: 8.5rem;
+        }
+    
+        @media (max-width: 576px) {
+            height: 5.125rem;
+        }
+    }
+
+    
+
+    &__content{
+        h2{
+            font-size: 1.5625rem;
+            line-height: 2.15rem;
+            font-weight: 300;
+        }
+
+    }
+
+    &__topic{
+        color: $black;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.875rem;
+
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item{
+       border-radius: 0.125rem;
+       overflow: hidden;
+    }
+
+    &__image{
+        height: 7.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @media (max-width: 827px) {
+            height: 8.5rem;
+        }
+    
+        @media (max-width: 576px) {
+            height: 5.125rem;
+        }
+    }
+
+    &__text{
+        background-color: $white;
+        padding: 0.875rem 0 2.5rem 0;
+
+        @include breakpoint-up(medium){
+            // padding: 1.875rem 1.5625rem;
+        }
+    }
+
+    &__title {
+        font-size: 0.75rem;
+        line-height: 1.25;
+        font-weight: 600;
+        color: $purple;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description{
+        font-size: 1rem;
+        color: $black;
+        margin-bottom: 0.5rem;
+        color: $darkblue;
+    }
+
+    &__author{
+        font-size: 0.625rem;
+        padding-bottom: 0.3rem;
+        color: $darkblue;
+        font-style: italic;
+    }
+
+    &__title2 {
+        font-size: 0.725rem;
+        line-height: 1.25;
+        font-weight: 600;
+        color: $purple;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description2{
+        font-size: 0.825rem;
+        color: $black;
+        margin-bottom: 0.5rem;
+        color: $darkblue;
+    }
+}
+.destinations-section {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.destinations-section h5 {
+    font-size: 1rem;
+    color: red;
+}
+
+.destinations {
+    flex: 1;  
+}
+
+.destinations > p {
+    padding: 1rem 0;
+}
+
+.red {
+    color: red;
+}
+
+.travel-tales {
+    display: flex;
+    gap: 2rem;
+}
+
+
+#episodes-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0  4rem 0;
+}
+
+#episodes-button button {
+    background-color: white;
+    color: rgb(61, 61, 103);
+    border: 1px solid rgb(61, 61, 103);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
